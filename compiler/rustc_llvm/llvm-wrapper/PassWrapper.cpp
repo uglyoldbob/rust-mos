@@ -223,11 +223,7 @@ fromRust(LLVMRustCodeModel Model) {
   case LLVMRustCodeModel::Large:
     return CodeModel::Large;
   case LLVMRustCodeModel::None:
-#if LLVM_VERSION_LT(16, 0)
     return None;
-#else
-    return std::nullopt;
-#endif
   default:
     report_fatal_error("Bad CodeModel.");
   }
