@@ -23,7 +23,7 @@ cmake -C clang/cmake/caches/MOS.cmake -G "Ninja" -S llvm -B build \
    -DLLVM_TOOLCHAIN_TOOLS="llvm-addr2line;llvm-ar;llvm-cxxfilt;llvm-dwarfdump;llvm-mc;llvm-nm;llvm-objcopy;llvm-objdump;llvm-ranlib;llvm-readelf;llvm-readobj;llvm-size;llvm-strings;llvm-strip;llvm-symbolizer;llvm-config;llc" \
    -DLIBXML2_LIBRARY=/usr/lib/x86_64-linux-gnu/libxml2.so \
    -DLLVM_TARGETS_TO_BUILD="MOS;X86" \
-   -DLLVM_ENABLE_PROJECTS="clang;lld;lldb"
+   -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lld;lldb"
 cmake --build build -t install
 ```
 
